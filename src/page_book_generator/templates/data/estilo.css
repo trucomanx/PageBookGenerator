@@ -1,0 +1,143 @@
+    body {
+      font-family: 'Georgia', serif;
+      background: #FFFFFF;
+      font-size: 14pt;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    #includedHeadContent {
+      background: linear-gradient(to bottom, #3C492F, #7C896F);
+      padding: 10px 0;
+    }
+
+    #includedHeadContent img {
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    #includedHeadContent a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      margin: 0 15px;
+      text-shadow: 1px 1px 5px black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .box {
+      background: linear-gradient(to bottom, #FFFFFF, #EEEEEE);
+      border-radius: 25px;
+      padding: 25px;
+      width: 900px;
+      margin-bottom: 40px;
+      box-shadow: 0px 0px 15px #777;
+      text-align: center;
+    }
+
+    .box img {
+      width: 75%;
+      margin-bottom: 20px;
+    }
+
+    .box h1 {
+      color: #381701;
+      margin-bottom: 15px;
+    }
+
+    .box h2 {
+      text-align: left;
+      color: #381701;
+      margin-bottom: 15px;
+    }
+
+    .box p {
+      text-align: justify;
+      margin: 10px 0;
+      color: #111;
+    }
+
+    .footer {
+      font-size: 10pt;
+      color: #444;
+      margin: 40px 0;
+    }
+    
+    
+pre, code {
+  text-align: left;
+  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px;
+  background: #111E0D; background: #111E0D -webkit-gradient(linear, left top, left 280%, from(#111E0D), to(#7C896F));
+  color: white;
+  tab-size: 4; -moz-tab-size: 4;
+}
+
+    
+    
+.content {
+  padding: 15px;
+}
+
+.boxfooter {
+  text-align: left;
+}
+
+
+.content .boxfooter {
+  width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.boxfooter .services {
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: top;
+  padding: 0px;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+.boxfooter .services img {
+  margin-right: 5px;
+  vertical-align: bottom;
+}
+
+.boxfooter .services li {
+  padding: 2px;
+}
+
+.boxfooter h3 {
+  border-bottom: 1px solid #777777;
+}
+
+
+
+ /* Estilo do botão fixo */
+    #voltarTopo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 10px 15px;
+      font-size: 20px;
+      background-color: #3C492F; /* #3C492F, #7C896F */
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      display: none; /* escondido por padrão */
+      z-index: 1000;
+    }
+
+    #voltarTopo:hover {
+      background-color: #0056b3;
+    }

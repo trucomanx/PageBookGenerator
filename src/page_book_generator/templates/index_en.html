@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>..:: Samba de Gafieira ::..</title>
+    <link href="data/estilo.css" media="screen" rel="stylesheet" type="text/css">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	
+    <script src="data/jquery-3.7.1.min.js"></script> 
+	
+    <script> 
+    $(function(){
+      $("#includedHeadContent").load("head.html"); 
+    });
+    </script> 
+	
+    <script> 
+    $(function(){
+      $("#includedFootContent").load("foot.html"); 
+    });
+    </script> 
+    
+  <script>
+    // Show the button when scrolling down
+    window.addEventListener('scroll', function () {
+      const botao = document.getElementById('voltarTopo');
+      if (window.scrollY > 100) {
+        botao.style.display = 'block';
+      } else {
+        botao.style.display = 'none';
+      }
+    });
+  </script>
+</head>
+<body>
+
+<!----------------------------------------------------------------------------->
+<div id="includedHeadContent"> </div>
+<!----------------------------------------------------------------------------->
+<div class="container">
+
+
+<!----------------------------------------------------------------------------->
+<div class="box">
+<h1>{{title}}</h1>
+
+<div style="float: left; width: 40.0%;">
+<center><img src="images/cover-tiny-2.png" border="0" /></center>
+</div>
+
+<div style="float: right; width: 60.0%;">
+{{description}}
+</div>
+
+</div>
+<!----------------------------------------------------------------------------->
+<div id="reference" class="box">
+
+<h1>Reference</h1>
+
+<p>
+Download the
+<a href="data/bibliography.bib">BibTeX bibliography file</a>.
+</p>
+
+<pre>
+{{bibtex}}
+</pre>
+
+</div>
+<!----------------------------------------------------------------------------->
+<div id="buybook" class="box">
+
+<h1>Buy Printed Book</h1>
+
+<h2>Brazil</h2>
+
+<a href="{{uiclap-bw-br-link}}" target="_blank">
+<img src="images/uiclap.svg"
+     border="0"
+     style="display: block; float: left; width:15%; padding:15px" />
+</a>
+
+<p>
+Using this link, you can purchase in Brazil a
+<b>black and white</b> printed version of the book
+<a href="{{uiclap-bw-br-link}}" target="_blank">{{title}}</a>.
+</p>
+
+<div style="clear: both;"></div>
+
+<a href="{{amazon-bw-br-link}}" target="_blank">
+<img src="images/amazon.svg"
+     border="0"
+     style="display: block; float: left; width:15%; padding:15px" />
+</a>
+
+<p>
+Using this link, you can purchase a
+<b>black and white</b> printed version of the book
+<a href="{{amazon-bw-br-link}}" target="_blank">{{title}}</a>.
+</p>
+
+<div style="clear: both;"></div>
+
+<h2>Rest of the World</h2>
+
+<a href="{{amazon-bw-world-link}}" target="_blank">
+<img src="images/amazon.svg"
+     border="0"
+     style="display: block; float: left; width:15%; padding:15px" />
+</a>
+
+<p>
+Using this link, you can purchase a
+<b>black and white</b> printed version of the book
+<a href="{{amazon-bw-world-link}}" target="_blank">{{title}}</a>.
+</p>
+
+</div>
+<!----------------------------------------------------------------------------->
+<div id="downpdf" class="box">
+
+<h1>Buy Digital Book</h1>
+
+<a href="{{gplay-color-link}}" target="_blank">
+<img src="images/google-play.svg"
+     border="0"
+     style="display: block; float: left; width:15%; padding:15px" />
+</a>
+
+<p>
+If you would like to obtain the
+<b>color digital edition</b> of the book -
+<a href="{{gplay-color-link}}" target="_blank">{{title}}</a>,
+it can be downloaded using the following
+<a href="{{gplay-color-link}}" target="_blank">link</a>.
+</p>
+
+<div style="clear: both;"></div>
+
+<a href="{{free-link}}" target="_blank">
+<img src="images/free-price-tag.svg"
+     border="0"
+     style="display: block; float: left; width:15%; padding:15px" />
+</a>
+
+<p>
+If you would like to obtain the free edition of the book -
+<a href="{{free-link}}" target="_blank">{{title}}</a>,
+it can be downloaded using the following
+<a href="{{free-link}}" target="_blank">link</a>.
+</p>
+
+</div>
+<!----------------------------------------------------------------------------->
+<div id="donate" class="box">
+
+<h1>Donations</h1>
+
+<h2>Buy Me a Coffee ☕</h2>
+
+<p>
+If you appreciate my work and would like to support my projects,
+<a href="{{coffee-link}}">you can buy me a coffee! ☕</a>
+Your support helps keep my projects running and allows me to create more useful tools.
+</p>
+
+<h2>Using Credit Card</h2>
+
+<p>
+If you appreciate my work and would like to support my projects,
+you can donate <b>$3 USD</b> using a
+<a href="{{stripe-link}}">credit card</a>.
+Your support helps keep my projects running and allows me to create more useful tools.
+</p>
+
+<h2>Using PIX</h2>
+
+<p>
+
+<a href="images/PixQR7.jpeg">
+<img src="images/PixQR7.jpeg"
+     border="0"
+     style="display: block; float: left; width:7%" />
+</a>
+
+If you appreciate my work and are in Brazil,
+you can send me a
+<a href="images/PixQR7.jpeg"><b>PIX</b></a>
+payment of <b>R$ 7</b>.
+Your support helps keep my projects running and allows me to create more useful tools.
+
+<div style="clear: both;"></div>
+
+</p>
+
+<h2>Using PayPal</h2>
+
+<p>
+
+You can donate <b>10 Brazilian reais</b> using the following link
+to my PayPal account with the ID:
+<b>ballroomdancebackup</b>
+
+<form action="https://www.paypal.com/cgi-bin/webscr"
+      method="post"
+      target="_top">
+
+<input type="hidden" name="cmd" value="_donations" />
+<input type="hidden" name="business" value="77EX7RS7U6D56" />
+<input type="hidden" name="item_name" value="Support this project" />
+<input type="hidden" name="currency_code" value="BRL" />
+<input type="hidden" name="amount" value="10" />
+
+<input type="image"
+       src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+       border="0"
+       name="submit"
+       title="PayPal - The safer, easier way to pay online!"
+       alt="Donate using PayPal button" />
+
+<img alt="Donate using PayPal"
+     border="0"
+     src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+     width="1"
+     height="1" />
+
+</form>
+
+</p>
+
+</div>
+<!----------------------------------------------------------------------------->
+<div id="bugs" class="box">
+
+<h1>Error Reports</h1>
+
+<p>
+You can submit a question or observation regarding an error
+<a href="{{bug-link}}" target="_blank">here</a>.
+</p>
+
+</div>
+<!----------------------------------------------------------------------------->
+
+
+
+</div>
+
+<button id="voltarTopo"
+        onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    ↑ Top
+</button>
+
+<!----------------------------------------------------------------------------->
+<div id="includedFootContent" class="content"> </div>
+<!----------------------------------------------------------------------------->
+
+
+</body>
+</html>
