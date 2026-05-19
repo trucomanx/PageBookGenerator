@@ -4,14 +4,29 @@ import argparse
 import shutil
 import os
 
-from worker import pipeline
+import page_book_generator.about as about
 
+from page_book_generator.worker import pipeline
+from page_book_generator.modules.wabout import show_about
+
+class AboutAction(argparse.Action):
+    def __call__(self, parser, namespace, values, option_string=None):
+        show_about()
+        parser.exit()
 
 def main():
 
     parser = argparse.ArgumentParser(
-        description="HTML page generator",
+        prog=about.__program_name__,
+        description=about.__description__,
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
+    )
+
+    parser.add_argument(
+        "--about",
+        nargs=0,
+        action=AboutAction,
+        help="Show information about the application"
     )
 
     LANGUAGES = ["pt", "en"]
@@ -101,6 +116,10 @@ def main():
         
     if os.path.exists(args.cover):
         shutil.copy(args.cover, os.path.join(args.output_dir,"images","cover.png"))
+
+    #show_about()
+
+
 
 if __name__ == "__main__":
     main()

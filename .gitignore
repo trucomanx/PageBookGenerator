@@ -2,3 +2,4 @@
 /test/output/
 /test/reduced_index/output/
 /test/*/output
+/src/page_book_generator/modules/__pycache__/

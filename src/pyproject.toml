@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "page_book_generator"
+version = "0.1.0"
+description = "Page Book Generator"
+readme = "README.md"
+authors = [{name = "Fernando Pujaico Rivera", email = "fernando.pujaico.rivera@gmail.com"}]
+maintainers = [{name = "Fernando Pujaico Rivera", email = "fernando.pujaico.rivera@gmail.com"}]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+license = "GPL-3.0-only WITH Classpath-Exception-2.0 OR BSD-3-Clause"
+license-files = ["LICENSE"]
+keywords = ["writing", "translate"]
+dependencies = []
+
+[project.urls]
+"Bug Reports" = "https://github.com/trucomanx/PageBookGenerator/issues"
+"Funding" = "https://trucomanx.github.io/en/funding.html"
+"Documentation" = "https://github.com/trucomanx/PageBookGenerator/tree/main/doc"
+"Source" = "https://github.com/trucomanx/PageBookGenerator"
+
+[project.scripts]
+"page-book-generator" = "page_book_generator.program:main"
+
+[tool.setuptools]
+packages = ["page_book_generator", "page_book_generator.modules"]
+
+[tool.setuptools.package-data]
+"page_book_generator" = ["templates/*", "templates/data/*", "templates/images/*"]
