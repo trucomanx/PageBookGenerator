@@ -57,8 +57,8 @@ jobs:
         run: |
           cd src
           python -m PyInstaller --onefile --windowed \
-            --name page_book_generatorr \
-            --add-data "page_book_generatorr/templates:templates" \
+            --name page_book_generator \
+            --add-data "page_book_generator/templates:templates" \
             program_launcher.py
 
       - name: Build (Windows)
@@ -67,8 +67,8 @@ jobs:
         run: |
           cd src
           python -m PyInstaller --onefile --windowed `
-            --name page_book_generatorr `
-            --add-data "page_book_generatorr/templates;templates" `
+            --name page_book_generator `
+            --add-data "page_book_generator/templates;templates" `
             program_launcher.py
 
       - name: Upload build artifact
