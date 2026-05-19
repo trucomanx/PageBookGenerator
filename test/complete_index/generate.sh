@@ -5,5 +5,5 @@ python3 ../../src/page_book_generator/main.py \
   --index-data "index_data.json" \
   --description "description.txt" \
   --bibliography "bibliography.bib" \
-  --template-type "complete_index" \
+  --template-type "complete" \
   --output-dir "output"

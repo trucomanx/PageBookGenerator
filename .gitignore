@@ -1,2 +1,4 @@
 /src/page_book_generator/__pycache__/
 /test/output/
+/test/reduced_index/output/
+/test/*/output

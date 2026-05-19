@@ -26,31 +26,11 @@ def gerar_html_de_template(template_path, saida_path, textos):
     print(f"Arquivo gerado: {saida_path}")
 
 
-def working_templates(input_dir, output_dir, footer_header, index_data, index_src):
-    os.makedirs(output_dir,exist_ok=True)
-   
-    gerar_html_de_template(
-        os.path.join(input_dir,"head.html"),
-        os.path.join(output_dir,"head.html"),
-        footer_header
-    )
-    
-    gerar_html_de_template(
-        os.path.join(input_dir,"foot.html"),
-        os.path.join(output_dir,"foot.html"),
-        footer_header
-    )
-
-    gerar_html_de_template(
-        os.path.join(input_dir, index_src),
-        os.path.join(output_dir,"index.html"),
-        index_data
-    )
-
 def pipeline(   index_data_path,
                 description_path,
                 bibliography_path,
                 language = "pt",
+                template_type = "complete",
                 output_dir="output"):    
     
     dir_of_file = os.path.dirname(os.path.abspath(__file__))
@@ -75,6 +55,7 @@ def pipeline(   index_data_path,
     index_data["description"] = description
     index_data["bibtex"] = bibliography
     
+    footer_header["otherbooks-link"] = index_data["otherbooks-link"]
     footer_header["email-link"] = index_data["email-link"]
     footer_header["bug-link"] = index_data["bug-link"]
     footer_header["x-link"] = index_data["x-link"]
@@ -91,11 +72,29 @@ def pipeline(   index_data_path,
 
     if os.path.exists(bibliography_path):
         shutil.copy(bibliography_path, os.path.join(output_dir,"data","bibliography.bib"))
-                    
-    working_templates(input_dir, output_dir, footer_header, index_data, f"index_{language}.html")
+      
+    gerar_html_de_template(
+        os.path.join(input_dir,f"{template_type}_head.html"),
+        os.path.join(output_dir,"head.html"),
+        footer_header
+    )
+    
+    gerar_html_de_template(
+        os.path.join(input_dir,"foot.html"),
+        os.path.join(output_dir,"foot.html"),
+        footer_header
+    )
+
+    gerar_html_de_template(
+        os.path.join(input_dir, f"{template_type}_index_{language}.html"),
+        os.path.join(output_dir,"index.html"),
+        index_data
+    )
+
 
 def main(): 
     language = "pt"
+    template_type = "complete"
     index_data_path = "index_data.json"
     description_path = "description.txt"
     bibliography_path = "bibliography.bib"
@@ -106,6 +105,7 @@ def main():
                 description_path,
                 bibliography_path,
                 language,
+                template_type,
                 output_dir)
 
 if __name__ == "__main__":
