@@ -1,6 +1,6 @@
 #!/bin/bash
 
-python3 ../../src/page_book_generator/main.py \
+PYTHONPATH=../../src python3 -m page_book_generator.program \
   --language "en" \
   --index-data "index_data.json" \
   --description "description.txt" \
