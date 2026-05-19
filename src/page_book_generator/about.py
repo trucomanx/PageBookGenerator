@@ -1,6 +1,6 @@
 # about.py
 
-__version__ = "0.1.1"
+__version__ = "0.1.2"
 __package__ = "page_book_generator"
 __program_name__ = "page-book-generator"
 __author__ = "Fernando Pujaico Rivera"
