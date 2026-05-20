@@ -3,3 +3,5 @@
 /test/reduced_index/output/
 /test/*/output
 /src/page_book_generator/modules/__pycache__/
+/src/dist/
+/src/page_book_generator.egg-info/
