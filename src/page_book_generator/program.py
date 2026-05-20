@@ -29,7 +29,7 @@ def main():
         help="Show information about the application"
     )
 
-    LANGUAGES = ["pt", "en"]
+    LANGUAGES = ["pt", "en", "es"]
     parser.add_argument(
         "--language",
         type=str,
