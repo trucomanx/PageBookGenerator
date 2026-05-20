@@ -6,9 +6,12 @@
     "x-link": "https://x.com/trucomanx",
     "youtube-link": "https://www.youtube.com/@fernando-pujaico-rivera",
     "rss-link": "https://trucomanx.wordpress.com/rss",
-    "uiclap-bw-br-link": "https://www.amazon.com/dp/B0DJM6FXXM",
-    "amazon-bw-br-link": "https://www.amazon.com/dp/B0DJM6FXXM",
-    "amazon-bw-world-link": "https://www.amazon.com/dp/B0DJM6FXXM",
+    "uiclap-br-link": "https://www.amazon.com/dp/B0DJM6FXXM",
+    "uiclap-br-type": "color",
+    "amazon-br-link": "https://www.amazon.com/dp/B0DJM6FXXM",
+    "amazon-br-type": "color",
+    "amazon-world-link": "https://www.amazon.com/dp/B0DJM6FXXM",
+    "amazon-world-type": "color",
     "coffee-link": "https://ko-fi.com/trucomanx",
     "stripe-link": "https://buy.stripe.com/bIYaHZ51k5Qt61a144"
 }

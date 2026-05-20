@@ -93,12 +93,12 @@ def pipeline(   index_data_path,
 
 
 def main(): 
-    language = "pt"
-    template_type = "complete"
+
     index_data_path = "index_data.json"
     description_path = "description.txt"
     bibliography_path = "bibliography.bib"
-    
+    language = "pt"
+    template_type = "complete"
     output_dir="output"
     
     pipeline(   index_data_path,
